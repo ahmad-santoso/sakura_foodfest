@@ -46,6 +46,11 @@
                         <a href="{{ route('table-reservasi') }}" class="text-blue-500 hover:underline">
                             Tabel Reservasi
                         </a>
+
+                        <!-- Data Product -->
+                        <a href="{{ route('index') }}" class="text-blue-500 hover:underline">
+                            Data Product
+                        </a>
                     </div>
                 </div>
                 <div>

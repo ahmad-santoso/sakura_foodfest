@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,6 +24,7 @@ Route::get('/home', function () {
 
 // route resource for products
 Route::resource('/products', \App\Http\Controllers\ProductController::class);
+// Route::resource('products', ProductController::class);
 Route::post('/postlogin', [LoginController::class, 'login'])->name('postlogin');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
@@ -31,4 +33,4 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 Route::get('/ringkasan-penjualan', [HomeController::class, 'showRingkasanPenjualan'])->name('ringkasan-penjualan');
 Route::get('/daftarmenu-terlaris', [HomeController::class, 'showDaftarMenuTerlaris'])->name('daftarmenu-terlaris');
 Route::get('/table-reservasi', [HomeController::class, 'showTableReservasi'])->name('table-reservasi');
-
+Route::get('/products', [HomeController::class, 'showProducts'])->name('index');

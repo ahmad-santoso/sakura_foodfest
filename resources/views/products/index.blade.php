@@ -31,6 +31,7 @@
                         <a href="{{ route('ringkasan-penjualan') }}" class="text-blue-500 hover:underline">Ringkasan Penjualan</a>
                         <a href="{{ route('daftarmenu-terlaris') }}" class="text-blue-500 hover:underline">Daftar Menu Terlaris</a>
                         <a href="{{ route('table-reservasi') }}" class="text-blue-500 hover:underline">Tabel Reservasi</a>
+                        <a href="{{ route('index') }}" class="text-blue-500 hover:underline">Data Product</a>
                     </div>
                 </div>
                 <div>
@@ -72,11 +73,11 @@
                                     <td class="px-6 py-4 border-b">{{ $product->stock }}</td>
                                     <td class="px-6 py-4 border-b">
                                         <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('products.destroy', $product->id) }}" method="POST">
-                                            <a href="{{ route('products.show', $product->id) }}" class="btn btn-dark bg-blue-500 hover:bg-blue-600 py-1 px-3">SHOW</a>
-                                            <a href="{{ route('products.edit', $product->id) }}" class="btn btn-primary bg-yellow-500 hover:bg-yellow-600 py-1 px-3">EDIT</a>
+                                            <a href="{{ route('products.show', $product->id) }}" class="btn btn-dark bg-blue-500 text-white hover:bg-blue-600 py-1 px-3">SHOW</a>
+                                            <a href="{{ route('products.edit', $product->id) }}" class="btn btn-primary bg-yellow-500 text-white hover:bg-yellow-600 py-1 px-3">EDIT</a>
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-danger bg-red-500 hover:bg-red-600 py-1 px-3">HAPUS</button>
+                                            <button type="submit" class="btn btn-danger bg-red-500 text-white hover:bg-red-600 py-1 px-3">HAPUS</button>
                                         </form>
                                     </td>
                                 </tr>

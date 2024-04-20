@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
+
 
 class HomeController extends Controller
 {
@@ -30,4 +32,12 @@ class HomeController extends Controller
     {
         return view('fitur.table-reservasi');
     }
+    
+    public function showProducts()
+    {
+        $products = Product::paginate(10);  
+
+        return view('products.index', compact('products')); 
+    }
+
 }
