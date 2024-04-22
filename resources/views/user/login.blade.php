@@ -24,13 +24,21 @@
                     <!-- Email Input -->
                     <div class="mb-4">
                         <label for="email" class="block text-sm font-medium text-gray-600">Email</label>
-                        <input type="email" name="email" id="email" class="mt-1 p-2 w-full rounded-md border border-gray-300 focus:border-indigo-500 focus:ring focus:ring-indigo-200">
+                        <input type="email" name="email" id="email" placeholder="your@gmail.com" class="mt-1 p-2 w-full rounded-md border border-gray-300 focus:border-indigo-500 focus:ring focus:ring-indigo-200">
                     </div>
 
                     <!-- Password Input -->
-                    <div class="mb-4">
+                    <div class="mb-4 relative">
                         <label for="password" class="block text-sm font-medium text-gray-600">Password</label>
-                        <input type="password" name="password" id="password" class="mt-1 p-2 w-full rounded-md border border-gray-300 focus:border-indigo-500 focus:ring focus:ring-indigo-200">
+                        <input type="password" name="password" id="password" placeholder="your password" class="mt-1 p-2 pr-10 w-full rounded-md border border-gray-300 focus:border-indigo-500 focus:ring focus:ring-indigo-200">
+
+                        <!-- Eye icons -->
+                        <button type="button" id="togglePassword" class="absolute inset-y-0 right-0 flex items-center px-2 text-gray-600 top-1/2 transform -translate-y-1/2 mt-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path d="M22 12c-2.4 4.6-7.3 8-10 8s-7.6-3.4-10-8c2.4-4.6 7.3-8 10-8s7.6 3.4 10 8zm-10 6c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm0-5c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5 1.5-.7 1.5-1.5-.7-1.5-1.5-1.5z"></path>
+                            </svg>
+                        </button>
                     </div>
 
                     <!-- Remember Me Checkbox -->
@@ -52,6 +60,22 @@
 
     </div>
 
+    <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const password = document.getElementById('password');
+
+        togglePassword.addEventListener('click', function() {
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            
+            // Tipe eye
+            if (type === 'password') {
+                togglePassword.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye"><circle cx="12" cy="12" r="3"></circle><path d="M22 12c-2.4 4.6-7.3 8-10 8s-7.6-3.4-10-8c2.4-4.6 7.3-8 10-8s7.6 3.4 10 8zm-10 6c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm0-5c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5 1.5-.7 1.5-1.5-.7-1.5-1.5-1.5z"></path></svg>';
+            } else {
+                togglePassword.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye-off"><path d="M3 3L21 21M21 3L3 21"></path></svg>';
+            }
+        });
+    </script>
 </body>
 
 </html>

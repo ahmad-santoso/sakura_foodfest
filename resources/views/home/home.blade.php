@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Sakura-FoodFest</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body class="bg-gray-100 h-screen">
 
     <div class="flex">
-
+        
         <!-- Navbar -->
-        <nav class="bg-white w-80 h-screen shadow-md">
+        <nav class="bg-white w-80 h-screen shadow-md fixed">
             <div class="p-4">
-                <h1 class="text-xl font-semibold mb-4">Sakura-FoodFest</h1>
+                <h1 class="text-xl font-semibold mb-4 text-center">Sakura-FoodFest</h1>
                 <div class="flex flex-col items-center mb-4">
                     <div class="w-40 h-40 rounded-full overflow-hidden mb-1">
                         <img src="{{ asset('assets/imageprofile.png') }}" alt="Avatar" class="w-full h-full object-cover transition duration-300 ease-in-out transform hover:scale-105">
@@ -26,31 +27,16 @@
                     </div>
                     
                     <div class="flex flex-col space-y-2 mt-4">
-                        
                         <!-- Dashboard -->
-                        <a href="{{ route('home') }}" class="text-blue-500 hover:underline">
-                            Dashboard
-                        </a>
-
+                        <a href="{{ route('home') }}" class="text-blue-500 hover:underline">Dashboard</a>
                         <!-- Ringkasan Penjualan -->
-                        <a href="{{ route('ringkasan-penjualan') }}" class="text-blue-500 hover:underline">
-                            Ringkasan Penjualan
-                        </a>
-
+                        <a href="{{ route('ringkasan-penjualan') }}" class="text-blue-500 hover:underline">Ringkasan Penjualan</a>
                         <!-- Daftar Menu Terlaris -->
-                        <a href="{{ route('daftarmenu-terlaris') }}" target="_self" class="text-blue-500 hover:underline">
-                            Daftar Menu Terlaris
-                        </a>
-
+                        <a href="{{ route('daftarmenu-terlaris') }}" target="_self" class="text-blue-500 hover:underline">Daftar Menu Terlaris</a>
                         <!-- Tabel Reservasi -->
-                        <a href="{{ route('table-reservasi') }}" class="text-blue-500 hover:underline">
-                            Tabel Reservasi
-                        </a>
-
+                        <a href="{{ route('table-reservasi') }}" class="text-blue-500 hover:underline">Tabel Reservasi</a>
                         <!-- Data Product -->
-                        <a href="{{ route('index') }}" class="text-blue-500 hover:underline">
-                            Data Product
-                        </a>
+                        <a href="{{ route('index') }}" class="text-blue-500 hover:underline">Data Product</a>
                     </div>
                 </div>
                 <div>
@@ -59,9 +45,8 @@
             </div>
         </nav>
 
-
         <!-- Content -->
-        <div class="flex-1 bg-gray-100 p-8">
+        <div class="flex-1 ml-80 p-8">
             <div class="bg-white p-8 rounded-lg shadow-md">
 
                 <h1 class="text-3xl mb-6 text-center font-semibold">Welcome to Sakura-FoodFest Dashboard</h1>
@@ -94,117 +79,104 @@
                     </div>
 
                 </div>
-            </div>
 
-            <!-- Container untuk Review dan Testimoni serta Daftar Staf -->
-            <div class="flex flex-wrap gap-8 mt-8">
+                <!-- Charts -->
+                <div class="mt-8">
 
-                <!-- Review dan Testimoni -->
-                <div id="review-dan-testimoni" class="flex-1 p-6 bg-white rounded-lg shadow-md">
-                    <h2 class="text-3xl mb-4 font-semibold text-center border-b pb-2">Review dan Testimoni</h2>
-                    
-                    <div class="mt-6 space-y-6">
-                        <!-- Review 1 -->
-                        <div class="flex items-center space-x-4">
-                            <div class="bg-blue-500 rounded-full p-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <strong class="block text-lg">John Doe</strong>
-                                <p class="text-gray-600">"Tempatnya nyaman dan makanannya enak! Saya suka datang ke sini."</p>
-                            </div>
-                        </div>
-
-                        <!-- Review 2 -->
-                        <div class="flex items-center space-x-4">
-                            <div class="bg-green-500 rounded-full p-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <strong class="block text-lg">Jane Doe</strong>
-                                <p class="text-gray-600">"Pelayanannya cepat dan ramah. Menu favorit saya adalah Sushi Salmon!"</p>
-                            </div>
-                        </div>
-
-                        <!-- Review 3 -->
-                        <div class="flex items-center space-x-4">
-                            <div class="bg-yellow-500 rounded-full p-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <strong class="block text-lg">Alice</strong>
-                                <p class="text-gray-600">"Makanannya lezat dan suasana restorannya sangat nyaman. Cocok untuk keluarga."</p>
-                            </div>
-                        </div>
+                    <!-- Chart for Monthly Revenue -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h2 class="text-xl mb-4 font-semibold">Monthly Revenue</h2>
+                        <canvas id="monthlyRevenueChart"></canvas>
                     </div>
 
-                    <!-- Tombol untuk Lihat Semua Testimoni -->
-                    <div class="mt-8 text-center">
-                        <a href="#" class="text-blue-500 hover:underline">Lihat semua testimoni</a>
+                    <!-- Chart for Monthly Orders -->
+                    <div class="bg-white p-6 mt-8 rounded-lg shadow-md">
+                        <h2 class="text-xl mb-4 font-semibold">Monthly Orders</h2>
+                        <canvas id="monthlyOrdersChart"></canvas>
+                    </div>
+
+                </div>
+
+                <!-- Recent Orders Table -->
+                <div class="mt-8">
+                    <h2 class="text-2xl mb-4 font-semibold">Recent Orders</h2>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <table class="min-w-full">
+                            <thead>
+                                <tr>
+                                    <th class="px-4 py-2">Order ID</th>
+                                    <th class="px-4 py-2">Customer Name</th>
+                                    <th class="px-4 py-2">Total Amount</th>
+                                    <th class="px-4 py-2">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Sample Row -->
+                                <tr>
+                                    <td class="border px-4 py-2">1</td>
+                                    <td class="border px-4 py-2">John Doe</td>
+                                    <td class="border px-4 py-2">$50</td>
+                                    <td class="border px-4 py-2">Completed</td>
+                                </tr>
+                                <!-- Add more rows here -->
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
-                <!-- Daftar Staf atau Karyawan -->
-                <div id="daftar-staf" class="flex-1 p-6 bg-white rounded-lg shadow-md">
-                    <h2 class="text-3xl mb-4 font-semibold text-center border-b pb-2">Daftar Staf atau Karyawan</h2>
-                    
-                    <div class="mt-6 space-y-6">
-                        <!-- Staff 1 -->
-                        <div class="flex items-center space-x-4">
-                            <div class="bg-blue-500 rounded-full p-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <strong class="block text-lg">John Doe</strong>
-                                <p class="text-gray-600">Kasir</p>
-                            </div>
-                        </div>
-
-                        <!-- Staff 2 -->
-                        <div class="flex items-center space-x-4">
-                            <div class="bg-green-500 rounded-full p-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <strong class="block text-lg">Jane Doe</strong>
-                                <p class="text-gray-600">Pelayan</p>
-                            </div>
-                        </div>
-
-                        <!-- Staff 3 -->
-                        <div class="flex items-center space-x-4">
-                            <div class="bg-yellow-500 rounded-full p-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <strong class="block text-lg">Alice</strong>
-                                <p class="text-gray-600">Chef</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tombol untuk Lihat Semua Staf -->
-                    <div class="mt-8 text-center">
-                        <a href="#" class="text-blue-500 hover:underline">Lihat semua staf</a>
-                    </div>
-                </div>
             </div>
-
         </div>
 
     </div>
+
+    <script>
+        // Monthly Revenue Chart
+        var ctx = document.getElementById('monthlyRevenueChart').getContext('2d');
+        var monthlyRevenueChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Monthly Revenue',
+                    data: [5000, 5500, 6000, 5800, 6200, 6500],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Monthly Orders Chart
+        var ctx2 = document.getElementById('monthlyOrdersChart').getContext('2d');
+        var monthlyOrdersChart = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Monthly Orders',
+                    data: [50, 55, 60, 58, 62, 65],
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
 </body>
 
 </html>

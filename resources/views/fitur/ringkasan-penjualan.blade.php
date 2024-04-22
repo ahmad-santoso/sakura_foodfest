@@ -13,10 +13,9 @@
 
     <div class="flex">
 
-        <!-- Navbar -->
-        <nav class="bg-white w-80 h-screen shadow-md">
+    <nav class="bg-white w-80 h-screen shadow-md fixed">
             <div class="p-4">
-                <h1 class="text-xl font-semibold mb-4">Sakura-FoodFest</h1>
+                <h1 class="text-xl font-semibold mb-4 text-center">Sakura-FoodFest</h1>
                 <div class="flex flex-col items-center mb-4">
                     <div class="w-40 h-40 rounded-full overflow-hidden mb-1">
                         <img src="{{ asset('assets/imageprofile.png') }}" alt="Avatar" class="w-full h-full object-cover transition duration-300 ease-in-out transform hover:scale-105">
@@ -27,26 +26,16 @@
                     </div>
                     
                     <div class="flex flex-col space-y-2 mt-4">
-                        
                         <!-- Dashboard -->
-                        <a href="{{ route('home') }}" class="text-blue-500 hover:underline">
-                            Dashboard
-                        </a>
-
+                        <a href="{{ route('home') }}" class="text-blue-500 hover:underline">Dashboard</a>
                         <!-- Ringkasan Penjualan -->
-                        <a href="{{ route('ringkasan-penjualan') }}" class="text-blue-500 hover:underline">
-                            Ringkasan Penjualan
-                        </a>
-
+                        <a href="{{ route('ringkasan-penjualan') }}" class="text-blue-500 hover:underline">Ringkasan Penjualan</a>
                         <!-- Daftar Menu Terlaris -->
-                        <a href="{{ route('daftarmenu-terlaris') }}" target="_self" class="text-blue-500 hover:underline">
-                            Daftar Menu Terlaris
-                        </a>
-
+                        <a href="{{ route('daftarmenu-terlaris') }}" target="_self" class="text-blue-500 hover:underline">Daftar Menu Terlaris</a>
                         <!-- Tabel Reservasi -->
-                        <a href="{{ route('table-reservasi') }}" class="text-blue-500 hover:underline">
-                            Tabel Reservasi
-                        </a>
+                        <a href="{{ route('table-reservasi') }}" class="text-blue-500 hover:underline">Tabel Reservasi</a>
+                        <!-- Data Product -->
+                        <a href="{{ route('index') }}" class="text-blue-500 hover:underline">Data Product</a>
                     </div>
                 </div>
                 <div>
@@ -56,7 +45,7 @@
         </nav>
 
         <!-- Content -->
-        <div class="flex-grow p-8">
+        <div class="flex-1 ml-80 p-8">
             <div id="ringkasan-penjualan" class="w-full p-8 bg-white rounded-lg shadow-md">
                 <h2 class="text-2xl mb-4 font-semibold">Ringkasan Penjualan</h2>
                 
