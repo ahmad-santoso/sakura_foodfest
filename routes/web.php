@@ -6,9 +6,13 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/landing_page', function () {
+    return view('landing_page.index');
+})->name('landing_page');
 
 Route::get('/login', function () {
     return view('user.login');

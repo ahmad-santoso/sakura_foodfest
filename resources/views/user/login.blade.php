@@ -9,6 +9,35 @@
 </head>
 
 <body class="bg-no-repeat bg-center h-screen" style="background-image: url('{{ asset('assets/imagelogin.jpg') }}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    <header class="bg-white shadow fixed w-full z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="/landing_page" class="flex items-center text-gray-800">
+                <svg class="w-6 h-6 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                <span class="text-xl font-semibold">Back</span>
+            </a>
+            <nav class="hidden md:flex space-x-4 items-center">
+                <a href="/login" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Login</a>
+                <a href="/register" class="border border-blue-500 text-blue-500 py-2 px-4 rounded hover:bg-blue-500 hover:text-white">Register</a>
+            </nav>
+            <button class="md:hidden text-gray-800 focus:outline-none" id="menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="md:hidden hidden" id="mobile-menu">
+            <a href="/landing_page" class="flex items-center text-gray-800">
+                <svg class="w-6 h-6 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                <span class="text-xl font-semibold">Back</span>
+            </a>
+            <a href="/login" class="block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Login</a>
+            <a href="/register" class="block px-4 py-2 mt-2 border border-blue-500 text-blue-500 rounded hover:bg-blue-500 hover:text-white">Register</a>
+        </div>
+    </header>
 
     <div class="flex h-screen">
 

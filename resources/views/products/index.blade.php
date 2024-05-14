@@ -27,10 +27,15 @@
                     </div>
                         
                     <div class="flex flex-col space-y-2 mt-4">
+                        <!-- Dashboard -->
                         <a href="{{ route('home') }}" class="text-blue-500 hover:underline">Dashboard</a>
+                        <!-- Ringkasan Penjualan -->
                         <a href="{{ route('ringkasan-penjualan') }}" class="text-blue-500 hover:underline">Ringkasan Penjualan</a>
-                        <a href="{{ route('daftarmenu-terlaris') }}" class="text-blue-500 hover:underline">Daftar Menu Terlaris</a>
+                        <!-- Daftar Menu Terlaris -->
+                        <a href="{{ route('daftarmenu-terlaris') }}" target="_self" class="text-blue-500 hover:underline">Daftar Menu Terlaris</a>
+                        <!-- Tabel Reservasi -->
                         <a href="{{ route('table-reservasi') }}" class="text-blue-500 hover:underline">Tabel Reservasi</a>
+                        <!-- Data Product -->
                         <a href="{{ route('index') }}" class="text-blue-500 hover:underline">Data Product</a>
                     </div>
                 </div>
