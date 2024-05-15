@@ -29,14 +29,14 @@
                     <div class="flex flex-col space-y-2 mt-4">
                         <!-- Dashboard -->
                         <a href="{{ route('home') }}" class="text-blue-500 hover:underline">Dashboard</a>
-                        <!-- Ringkasan Penjualan -->
-                        <a href="{{ route('ringkasan-penjualan') }}" class="text-blue-500 hover:underline">Ringkasan Penjualan</a>
-                        <!-- Daftar Menu Terlaris -->
-                        <a href="{{ route('daftarmenu-terlaris') }}" target="_self" class="text-blue-500 hover:underline">Daftar Menu Terlaris</a>
-                        <!-- Tabel Reservasi -->
-                        <a href="{{ route('table-reservasi') }}" class="text-blue-500 hover:underline">Tabel Reservasi</a>
-                        <!-- Data Product -->
-                        <a href="{{ route('index') }}" class="text-blue-500 hover:underline">Data Product</a>
+                        <!-- Sales Summary -->
+                        <a href="{{ route('ringkasan-penjualan') }}" class="text-blue-500 hover:underline">Sales Summary</a>
+                        <!-- List Of Best-Selling Menus -->
+                        <a href="{{ route('daftarmenu-terlaris') }}" target="_self" class="text-blue-500 hover:underline">List Of Best-Selling Menus</a>
+                        <!-- Reservation Table -->
+                        <a href="{{ route('table-reservasi') }}" class="text-blue-500 hover:underline">Reservation Table</a>
+                        <!-- Product Data -->
+                        <a href="{{ route('index') }}" class="text-blue-500 hover:underline">Product Data</a>
                     </div>
                 </div>
                 <div>
@@ -75,7 +75,7 @@
                     <!-- Card for Revenue -->
                     <div class="p-6 bg-red-100 rounded-lg shadow-md hover:bg-red-200 transition duration-300 ease-in-out">
                         <h2 class="text-xl mb-4 font-semibold">Total Revenue</h2>
-                        <p class="text-3xl font-bold">$5000</p>
+                        <p class="text-3xl font-bold">Rp. 6,000,000</p>
                     </div>
 
                 </div>
@@ -99,8 +99,8 @@
 
                 <!-- Recent Orders Table -->
                 <div class="mt-8">
-                    <h2 class="text-2xl mb-4 font-semibold">Recent Orders</h2>
                     <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h2 class="text-2xl mb-4 font-semibold">Recent Orders</h2>
                         <table class="min-w-full">
                             <thead>
                                 <tr>
@@ -111,14 +111,18 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- Sample Row -->
                                 <tr>
                                     <td class="border px-4 py-2">1</td>
-                                    <td class="border px-4 py-2">John Doe</td>
-                                    <td class="border px-4 py-2">$50</td>
+                                    <td class="border px-4 py-2">Mogan</td>
+                                    <td class="border px-4 py-2">Rp. 300,000</td>
                                     <td class="border px-4 py-2">Completed</td>
                                 </tr>
-                                <!-- Add more rows here -->
+                                <tr>
+                                    <td class="border px-4 py-2">2</td>
+                                    <td class="border px-4 py-2">Cilo</td>
+                                    <td class="border px-4 py-2">Rp. 250,000</td>
+                                    <td class="border px-4 py-2">Completed</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>

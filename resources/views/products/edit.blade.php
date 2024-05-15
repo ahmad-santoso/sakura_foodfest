@@ -23,7 +23,7 @@
                                 <label class="font-weight-bold">IMAGE</label>
                                 <input type="file" class="form-control @error('image') is-invalid @enderror" name="image">
                             
-                                <!-- error message untuk image -->
+                                <!-- error message to image -->
                                 @error('image')
                                     <div class="alert alert-danger mt-2">
                                         {{ $message }}
@@ -35,7 +35,7 @@
                                 <label class="font-weight-bold">TITLE</label>
                                 <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title', $product->title) }}" placeholder="Masukkan Judul Product">
                             
-                                <!-- error message untuk title -->
+                                <!-- error message to title -->
                                 @error('title')
                                     <div class="alert alert-danger mt-2">
                                         {{ $message }}
@@ -47,7 +47,7 @@
                                 <label class="font-weight-bold">DESCRIPTION</label>
                                 <textarea class="form-control @error('description') is-invalid @enderror" name="description" rows="5" placeholder="Masukkan Description Product">{{ old('description', $product->description) }}</textarea>
                             
-                                <!-- error message untuk description -->
+                                <!-- error message to description -->
                                 @error('description')
                                     <div class="alert alert-danger mt-2">
                                         {{ $message }}
@@ -61,7 +61,7 @@
                                         <label class="font-weight-bold">PRICE</label>
                                         <input type="number" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ old('price', $product->price) }}" placeholder="Masukkan Harga Product">
                                     
-                                        <!-- error message untuk price -->
+                                        <!-- error message to price -->
                                         @error('price')
                                             <div class="alert alert-danger mt-2">
                                                 {{ $message }}
@@ -74,7 +74,7 @@
                                         <label class="font-weight-bold">STOCK</label>
                                         <input type="number" class="form-control @error('stock') is-invalid @enderror" name="stock" value="{{ old('stock', $product->stock) }}" placeholder="Masukkan Stock Product">
                                     
-                                        <!-- error message untuk stock -->
+                                        <!-- error message to stock -->
                                         @error('stock')
                                             <div class="alert alert-danger mt-2">
                                                 {{ $message }}

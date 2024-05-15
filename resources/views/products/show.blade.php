@@ -14,7 +14,7 @@
     <div class="container mx-auto my-10 px-4">
         <div class="flex justify-between items-center mb-8">
             <h1 class="text-2xl font-semibold">Product Details</h1>
-            <a href="{{ route('index') }}" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Kembali</a>
+            <a href="{{ route('index') }}" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Back</a>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ringkasan Penjualan</title>
+    <title>Sales Summary</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -28,14 +28,14 @@
                     <div class="flex flex-col space-y-2 mt-4">
                         <!-- Dashboard -->
                         <a href="{{ route('home') }}" class="text-blue-500 hover:underline">Dashboard</a>
-                        <!-- Ringkasan Penjualan -->
-                        <a href="{{ route('ringkasan-penjualan') }}" class="text-blue-500 hover:underline">Ringkasan Penjualan</a>
-                        <!-- Daftar Menu Terlaris -->
-                        <a href="{{ route('daftarmenu-terlaris') }}" target="_self" class="text-blue-500 hover:underline">Daftar Menu Terlaris</a>
-                        <!-- Tabel Reservasi -->
-                        <a href="{{ route('table-reservasi') }}" class="text-blue-500 hover:underline">Tabel Reservasi</a>
-                        <!-- Data Product -->
-                        <a href="{{ route('index') }}" class="text-blue-500 hover:underline">Data Product</a>
+                        <!-- Sales Summary -->
+                        <a href="{{ route('ringkasan-penjualan') }}" class="text-blue-500 hover:underline">Sales Summary</a>
+                        <!-- List Of Best-Selling Menus -->
+                        <a href="{{ route('daftarmenu-terlaris') }}" target="_self" class="text-blue-500 hover:underline">List Of Best-Selling Menus</a>
+                        <!-- Reservation Table -->
+                        <a href="{{ route('table-reservasi') }}" class="text-blue-500 hover:underline">Reservation Table</a>
+                        <!-- Product Data -->
+                        <a href="{{ route('index') }}" class="text-blue-500 hover:underline">Product Data</a>
                     </div>
                 </div>
                 <div>
@@ -47,61 +47,61 @@
         <!-- Content -->
         <div class="flex-1 ml-80 p-8">
             <div id="ringkasan-penjualan" class="w-full p-8 bg-white rounded-lg shadow-md">
-                <h2 class="text-2xl mb-4 font-semibold">Ringkasan Penjualan</h2>
+                <h2 class="text-2xl mb-4 font-semibold">Sales Summary</h2>
                 
-                 <!-- Form Pilih Tanggal, Bulan, dan Tahun -->
+                 <!-- Form Select Date, Month, and Year -->
             <div class="mb-4">
                 <form action="{{ route('ringkasan-penjualan') }}" method="GET" class="flex space-x-4">
-                    <!-- Tahun -->
+                    <!-- Year -->
                     <div class="flex items-center space-x-2">
-                        <label for="tahun" class="text-gray-600">Tahun:</label>
-                        <select name="tahun" id="tahun" class="border rounded-md px-2 py-1">
-                            <!-- Pilihan Tahun -->
+                        <label for="year" class="text-gray-600">Year:</label>
+                        <select name="year" id="year" class="border rounded-md px-2 py-1">
+                            <!-- Select Year -->
                             @for ($i = date('Y'); $i >= date('Y') - 10; $i--)
-                                <option value="{{ $i }}" {{ request('tahun') == $i ? 'selected' : '' }}>{{ $i }}</option>
+                                <option value="{{ $i }}" {{ request('year') == $i ? 'selected' : '' }}>{{ $i }}</option>
                             @endfor
                         </select>
                     </div>
 
-                    <!-- Bulan -->
+                    <!-- Month -->
                     <div class="flex items-center space-x-2">
-                        <label for="bulan" class="text-gray-600">Bulan:</label>
-                        <select name="bulan" id="bulan" class="border rounded-md px-2 py-1">
-                            <!-- Pilihan Bulan -->
+                        <label for="month" class="text-gray-600">Month:</label>
+                        <select name="month" id="month" class="border rounded-md px-2 py-1">
+                            <!-- Select Month -->
                             @for ($i = 1; $i <= 12; $i++)
-                                <option value="{{ $i }}" {{ request('bulan') == $i ? 'selected' : '' }}>{{ date('F', mktime(0, 0, 0, $i, 1)) }}</option>
+                                <option value="{{ $i }}" {{ request('month') == $i ? 'selected' : '' }}>{{ date('F', mktime(0, 0, 0, $i, 1)) }}</option>
                             @endfor
                         </select>
                     </div>
 
-                    <!-- Tanggal -->
+                    <!-- Date -->
                     <div class="flex items-center space-x-2">
-                        <label for="tanggal" class="text-gray-600">Tanggal:</label>
-                        <input type="number" name="tanggal" id="tanggal" min="1" max="31" value="{{ request('tanggal') }}" class="border rounded-md px-2 py-1 w-20">
+                        <label for="date" class="text-gray-600">Date:</label>
+                        <input type="number" name="date" id="date" min="1" max="31" value="{{ request('date') }}" class="border rounded-md px-2 py-1 w-20">
                     </div>
 
-                    <!-- Tombol Submit -->
+                    <!-- Submit Button -->
                     <div class="flex items-center">
-                        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Tampilkan</button>
+                        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Show</button>
                     </div>
                 </form>
             </div>
 
-            <!-- Grafik penjualan berdasarkan waktu -->
+            <!-- Chart of sales by time -->
             <canvas id="timeSalesChart" class="w-full h-64"></canvas>
 
-                <!-- Tabel Data Transaksi -->
+                <!-- Transaction Data Table -->
                 <table class="min-w-full mt-8 bg-white">
-                    <!-- Header Tabel -->
+                    <!-- Table Header -->
                     <thead>
                         <tr>
-                            <th class="border px-4 py-2">ID Transaksi</th>
-                            <th class="border px-4 py-2">Jenis Pesanan</th>
-                            <th class="border px-4 py-2">Jumlah</th>
-                            <th class="border px-4 py-2">Harga</th>
+                            <th class="border px-4 py-2">Transaction ID</th>
+                            <th class="border px-4 py-2">Types Of Orders</th>
+                            <th class="border px-4 py-2">Total</th>
+                            <th class="border px-4 py-2">Price</th>
                         </tr>
                     </thead>
-                    <!-- Isi Tabel -->
+                    <!-- Table Contents -->
                     <tbody>
                         <tr>
                             <td class="border px-4 py-2">Food_0001</td>
@@ -115,35 +115,34 @@
                             <td class="border px-4 py-2">2</td>
                             <td class="border px-4 py-2">Rp. 100,000</td>
                         </tr>
-                        <!-- Data lainnya -->
                     </tbody>
                 </table>
 
-                <!-- Tombol Aksi Cepat -->
+                <!-- Quick Action Buttons -->
                 <div class="mt-4">
-                    <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Lihat Produk</a>
-                    <a href="#" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">Detail Transaksi</a>
+                    <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">View Products</a>
+                    <a href="#" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">Transaction Details</a>
                 </div>
             </div>
-             <!-- Modal Produk -->
+             <!-- Modal Products -->
             <div id="modalProduk" class="fixed z-10 inset-0 overflow-y-auto hidden">
-                <!-- ... (Modal Produk code) ... -->
+                <!-- ... (Modal Products code) ... -->
             </div>
 
-            <!-- Modal Detail Transaksi -->
+            <!-- Modal Transaction Details -->
             <div id="modalDetailTransaksi" class="fixed z-10 inset-0 overflow-y-auto hidden">
-                <!-- ... (Modal Detail Transaksi code) ... -->
+                <!-- ... (Modal Transaction Details code) ... -->
             </div>
         </div>
     </div>
 
     
-    <!-- Script untuk grafik penjualan berdasarkan waktu -->
+    <!-- Scripts for sales charts by time -->
     <script>
         const timeSalesData = {
-            labels: ['Hari Ini', 'Kemarin', '2 Hari Lalu'],
+            labels: ['Today', 'Yesterday', '2 Days Ago'],
             datasets: [{
-                label: 'Penjualan',
+                label: 'Sales',
                 data: [6000000, 5500000, 5800000],
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
                 borderColor: 'rgba(75, 192, 192, 1)',
@@ -165,7 +164,7 @@
             options: timeSalesOptions
         });
 
-        // Fungsi untuk menampilkan modal
+        // Function to display modal
         function openModal(modalId) {
             const modal = document.getElementById(modalId);
             modal.classList.remove('hidden');
@@ -176,14 +175,13 @@
             modal.classList.add('hidden');
         }
 
-        // Contoh data produk
+        // Sample product data
         const produk = [
             { nama: 'Nasi Goreng', harga: 'Rp. 25,000' },
-            { nama: 'Mie Ayam', harga: 'Rp. 20,000' },
-            // Tambahkan data produk lainnya
+            { nama: 'Mie Ayam', harga: 'Rp. 20,000' }
         ];
 
-        // Fungsi untuk menampilkan produk
+        // Function to display products
         function showProduk() {
             const listProduk = document.getElementById('listProduk');
             listProduk.innerHTML = '';
@@ -197,13 +195,13 @@
             openModal('modalProduk');
         }
 
-        // Contoh data detail transaksi
+        // Examples of transaction detail data
         const detailTransaksi = [
             { id: 'TRX001', jenisPesanan: 'Dine-in', jumlah: '2', harga: 'Rp. 200,000' },
-            // Tambahkan data detail transaksi lainnya
+            // Add other transaction details
         ];
 
-        // Fungsi untuk menampilkan detail transaksi
+        // Function to display transaction details
         function showDetailTransaksi() {
             const listDetail = document.getElementById('listDetailTransaksi');
             listDetail.innerHTML = '';

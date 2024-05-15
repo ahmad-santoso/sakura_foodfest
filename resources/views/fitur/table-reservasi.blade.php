@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table Reservasi</title>
+    <title>Reservation Table</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -30,14 +30,14 @@
                     <div class="flex flex-col space-y-2 mt-4">
                         <!-- Dashboard -->
                         <a href="{{ route('home') }}" class="text-blue-500 hover:underline">Dashboard</a>
-                        <!-- Ringkasan Penjualan -->
-                        <a href="{{ route('ringkasan-penjualan') }}" class="text-blue-500 hover:underline">Ringkasan Penjualan</a>
-                        <!-- Daftar Menu Terlaris -->
-                        <a href="{{ route('daftarmenu-terlaris') }}" target="_self" class="text-blue-500 hover:underline">Daftar Menu Terlaris</a>
-                        <!-- Tabel Reservasi -->
-                        <a href="{{ route('table-reservasi') }}" class="text-blue-500 hover:underline">Tabel Reservasi</a>
-                        <!-- Data Product -->
-                        <a href="{{ route('index') }}" class="text-blue-500 hover:underline">Data Product</a>
+                        <!-- Sales Summary -->
+                        <a href="{{ route('ringkasan-penjualan') }}" class="text-blue-500 hover:underline">Sales Summary</a>
+                        <!-- List Of Best-Selling Menus -->
+                        <a href="{{ route('daftarmenu-terlaris') }}" target="_self" class="text-blue-500 hover:underline">List Of Best-Selling Menus</a>
+                        <!-- Reservation Table -->
+                        <a href="{{ route('table-reservasi') }}" class="text-blue-500 hover:underline">Reservation Table</a>
+                        <!-- Product Data -->
+                        <a href="{{ route('index') }}" class="text-blue-500 hover:underline">Product Data</a>
                     </div>
                 </div>
                 <div>
@@ -50,73 +50,73 @@
         <div class="flex-1 ml-80 p-8">
             <div class="bg-white p-8 rounded-lg shadow-md">
 
-                <h1 class="text-3xl mb-6 font-semibold text-center">Tabel Reservasi</h1>
+                <h1 class="text-3xl mb-6 font-semibold text-center">Reservation Table</h1>
 
-                <!-- Tabel Reservasi -->
+                <!-- Reservation Table -->
                 <div class="overflow-x-auto">
                     <table class="min-w-full bg-white border rounded-lg">
                         <thead>
                             <tr class="bg-gray-200 text-gray-600 text-left">
-                                <th class="py-2 px-4">ID Reservasi</th>
-                                <th class="py-2 px-4">Nama Pemesan</th>
-                                <th class="py-2 px-4">Nomor Telepon</th>
-                                <th class="py-2 px-4">Tanggal Reservasi</th>
-                                <th class="py-2 px-4">Jam Reservasi</th>
-                                <th class="py-2 px-4">Jumlah Tamu</th>
-                                <th class="py-2 px-4">Status</th>
-                                <th class="py-2 px-4">Aksi</th>
+                                <th class="py-2 px-4 text-sm text-center">Reservation</th>
+                                <th class="py-2 px-4 text-sm text-center">Customer Name</th>
+                                <th class="py-2 px-4 text-sm text-center">Phone Number</th>
+                                <th class="py-2 px-4 text-sm text-center">Reservation Date</th>
+                                <th class="py-2 px-4 text-sm text-center">Reservation Hours</th>
+                                <th class="py-2 px-4 text-sm text-center">Number Of Guests</th>
+                                <th class="py-2 px-4 text-sm text-center">Status</th>
+                                <th class="py-2 px-4 text-sm text-center">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Contoh Data -->
+                            <!-- Data Example -->
                             <tr class="border-b text-gray-600 hover:bg-gray-100">
-                                <td class="py-2 px-4">R001</td>
-                                <td class="py-2 px-4">John Doe</td>
-                                <td class="py-2 px-4">08123456789</td>
-                                <td class="py-2 px-4">2024-04-14</td>
-                                <td class="py-2 px-4">19:00</td>
-                                <td class="py-2 px-4">4</td>
-                                <td class="py-2 px-4">Belum Dikonfirmasi</td>
-                                <td class="py-2 px-4">
+                                <td class="py-2 px-4 text-sm text-center">R001</td>
+                                <td class="py-2 px-4 text-sm text-center">Mogan</td>
+                                <td class="py-2 px-4 text-sm text-center">089678956721</td>
+                                <td class="py-2 px-4 text-sm text-center">2024-04-14</td>
+                                <td class="py-2 px-4 text-sm text-center">19:00</td>
+                                <td class="py-2 px-4 text-sm text-center">5</td>
+                                <td class="py-2 px-4 text-sm text-center">Unconfirmed</td>
+                                <td class="py-2 px-4 text-sm text-center">
                                     <button class="text-blue-500 hover:underline flex items-center space-x-2">
                                         <i class="fas fa-edit"></i> Edit
                                     </button>
                                     <button class="text-red-500 hover:underline flex items-center space-x-2">
-                                        <i class="fas fa-trash-alt"></i> Hapus
+                                        <i class="fas fa-trash-alt"></i> Delete
                                     </button>
                                 </td>
                             </tr>
                             <tr class="border-b text-gray-600 hover:bg-gray-100">
-                                <td class="py-2 px-4">R001</td>
-                                <td class="py-2 px-4">John Doe</td>
-                                <td class="py-2 px-4">08123456789</td>
-                                <td class="py-2 px-4">2024-04-14</td>
-                                <td class="py-2 px-4">19:00</td>
-                                <td class="py-2 px-4">4</td>
-                                <td class="py-2 px-4">Belum Dikonfirmasi</td>
-                                <td class="py-2 px-4">
+                                <td class="py-2 px-4 text-sm text-center">R002</td>
+                                <td class="py-2 px-4 text-sm text-center">Milo</td>
+                                <td class="py-2 px-4 text-sm text-center">067584239834</td>
+                                <td class="py-2 px-4 text-sm text-center">2024-04-19</td>
+                                <td class="py-2 px-4 text-sm text-center">14:00</td>
+                                <td class="py-2 px-4 text-sm text-center">7</td>
+                                <td class="py-2 px-4 text-sm text-center">Uncomfirmed</td>
+                                <td class="py-2 px-4 text-sm text-center">
                                     <button class="text-blue-500 hover:underline flex items-center space-x-2">
                                         <i class="fas fa-edit"></i> Edit
                                     </button>
                                     <button class="text-red-500 hover:underline flex items-center space-x-2">
-                                        <i class="fas fa-trash-alt"></i> Hapus
+                                        <i class="fas fa-trash-alt"></i> Delete
                                     </button>
                                 </td>
                             </tr>
                             <tr class="border-b text-gray-600 hover:bg-gray-100">
-                                <td class="py-2 px-4">R001</td>
-                                <td class="py-2 px-4">John Doe</td>
-                                <td class="py-2 px-4">08123456789</td>
-                                <td class="py-2 px-4">2024-04-14</td>
-                                <td class="py-2 px-4">19:00</td>
-                                <td class="py-2 px-4">4</td>
-                                <td class="py-2 px-4">Belum Dikonfirmasi</td>
-                                <td class="py-2 px-4">
+                                <td class="py-2 px-4 text-sm text-center">R003</td>
+                                <td class="py-2 px-4 text-sm text-center">Milo</td>
+                                <td class="py-2 px-4 text-sm text-center">897869458351</td>
+                                <td class="py-2 px-4 text-sm text-center">2024-04-20</td>
+                                <td class="py-2 px-4 text-sm text-center">16:00</td>
+                                <td class="py-2 px-4 text-sm text-center">6</td>
+                                <td class="py-2 px-4 text-sm text-center">Uncomfirmed</td>
+                                <td class="py-2 px-4 text-sm text-center">
                                     <button class="text-blue-500 hover:underline flex items-center space-x-2">
                                         <i class="fas fa-edit"></i> Edit
                                     </button>
                                     <button class="text-red-500 hover:underline flex items-center space-x-2">
-                                        <i class="fas fa-trash-alt"></i> Hapus
+                                        <i class="fas fa-trash-alt"></i> Delete
                                     </button>
                                 </td>
                             </tr>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Menu Terlaris</title>
+    <title>List Of Best-Selling Menus</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
@@ -28,14 +28,14 @@
                     <div class="flex flex-col space-y-2 mt-4">
                         <!-- Dashboard -->
                         <a href="{{ route('home') }}" class="text-blue-500 hover:underline">Dashboard</a>
-                        <!-- Ringkasan Penjualan -->
-                        <a href="{{ route('ringkasan-penjualan') }}" class="text-blue-500 hover:underline">Ringkasan Penjualan</a>
-                        <!-- Daftar Menu Terlaris -->
-                        <a href="{{ route('daftarmenu-terlaris') }}" target="_self" class="text-blue-500 hover:underline">Daftar Menu Terlaris</a>
-                        <!-- Tabel Reservasi -->
-                        <a href="{{ route('table-reservasi') }}" class="text-blue-500 hover:underline">Tabel Reservasi</a>
-                        <!-- Data Product -->
-                        <a href="{{ route('index') }}" class="text-blue-500 hover:underline">Data Product</a>
+                        <!-- Sales Summary -->
+                        <a href="{{ route('ringkasan-penjualan') }}" class="text-blue-500 hover:underline">Sales Summary</a>
+                        <!-- List Of Best-Selling Menus -->
+                        <a href="{{ route('daftarmenu-terlaris') }}" target="_self" class="text-blue-500 hover:underline">List Of Best-Selling Menus</a>
+                        <!-- Reservation Table -->
+                        <a href="{{ route('table-reservasi') }}" class="text-blue-500 hover:underline">Reservation Table</a>
+                        <!-- Product Data -->
+                        <a href="{{ route('index') }}" class="text-blue-500 hover:underline">Product Data</a>
                     </div>
                 </div>
                 <div>
@@ -48,110 +48,109 @@
         <div class="flex-1 ml-80 p-8">
             <div class="bg-white p-8 rounded-lg shadow-md">
 
-                <h2 class="text-xl mb-4 font-semibold text-center">Daftar Menu Terlaris</h2>
+                <h2 class="text-xl mb-4 font-semibold text-center">List Of Best-Selling Menus</h2>
 
                 <!-- Grid for Menu Cards -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     <!-- Additional Menu Cards -->
                     <div class="flex flex-col items-center justify-center bg-blue-50 p-4 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold mb-2">Ramen Ayam</h3>
-                        <p class="text-sm text-gray-500">Terjual 100 porsi</p>
+                        <h3 class="text-sm font-semibold mb-2">Oceanic Symphony Sashimi</h3>
+                        <p class="text-sm text-gray-500">Sold 100 items</p>
                     </div>
 
                     <div class="flex flex-col items-center justify-center bg-blue-50 p-4 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">Sushi Salmon</h3>
-                        <p class="text-sm text-gray-500">Terjual 90 porsi</p>
+                        <h3 class="text-sm font-semibold">Maguro Sashimi</h3>
+                        <p class="text-sm text-gray-500">Sold 90 items</p>
                     </div>
 
                     <div class="flex flex-col items-center justify-center bg-blue-50 p-4 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">Matcha Latte</h3>
-                        <p class="text-sm text-gray-500">Terjual 80 gelas</p>
+                        <h3 class="text-sm font-semibold">Hamachi Sashimi</h3>
+                        <p class="text-sm text-gray-500">Sold 80 items</p>
                     </div>
 
                     <div class="flex flex-col items-center justify-center bg-blue-50 p-4 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">Nasi Goreng Spesial</h3>
-                        <p class="text-sm text-gray-500">Terjual 75 porsi</p>
+                        <h3 class="text-sm font-semibold">Kimchi Ramen</h3>
+                        <p class="text-sm text-gray-500">Sold 75 items</p>
                     </div>
 
                     <div class="flex flex-col items-center justify-center bg-blue-50 p-4 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">Pancake Durian</h3>
-                        <p class="text-sm text-gray-500">Terjual 70 porsi</p>
+                        <h3 class="text-sm font-semibold">Pancake Durian</h3>
+                        <p class="text-sm text-gray-500">Sold 70 items</p>
                     </div>
 
                     <div class="flex flex-col items-center justify-center bg-blue-50 p-4 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">Teh Tarik</h3>
-                        <p class="text-sm text-gray-500">Terjual 65 gelas</p>
+                        <h3 class="text-sm font-semibold">Spicy Ramen With Sashimi</h3>
+                        <p class="text-sm text-gray-500">Sold 65 items</p>
                     </div>
 
                     <div class="flex flex-col items-center justify-center bg-blue-50 p-4 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">Burger Wagyu</h3>
-                        <p class="text-sm text-gray-500">Terjual 60 porsi</p>
+                        <h3 class="text-sm font-semibold">Beef Dumplings</h3>
+                        <p class="text-sm text-gray-500">Sold 60 items</p>
                     </div>
 
                     <div class="flex flex-col items-center justify-center bg-blue-50 p-4 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">Pizza Margherita</h3>
-                        <p class="text-sm text-gray-500">Terjual 55 porsi</p>
+                        <h3 class="text-sm font-semibold">Classic Sake Sashimi</h3>
+                        <p class="text-sm text-gray-500">Sold 55 items</p>
                     </div>
 
                     <div class="flex flex-col items-center justify-center bg-blue-50 p-4 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">Es Kopi Susu</h3>
-                        <p class="text-sm text-gray-500">Terjual 50 gelas</p>
+                        <h3 class="text-sm font-semibold">Soba Serenity</h3>
+                        <p class="text-sm text-gray-500">Sold 50 items</p>
                     </div>
 
                     <div class="flex flex-col items-center justify-center bg-blue-50 p-4 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">Chicken Katsu</h3>
-                        <p class="text-sm text-gray-500">Terjual 45 porsi</p>
-                    </div>
-
-                    <!-- More Jepanese Dishes -->
-                    <div class="flex flex-col items-center justify-center bg-blue-50 p-4 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">Gyoza</h3>
-                        <p class="text-sm text-gray-500">Terjual 40 porsi</p>
+                        <h3 class="text-sm font-semibold">Tokyo Roll</h3>
+                        <p class="text-sm text-gray-500">Sold 45 items</p>
                     </div>
 
                     <div class="flex flex-col items-center justify-center bg-blue-50 p-4 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">Takoyaki</h3>
-                        <p class="text-sm text-gray-500">Terjual 38 porsi</p>
+                        <h3 class="text-sm font-semibold">Unagi Kabayaki Sauce</h3>
+                        <p class="text-sm text-gray-500">Sold 40 items</p>
                     </div>
 
                     <div class="flex flex-col items-center justify-center bg-blue-50 p-4 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">Chawanmushi</h3>
-                        <p class="text-sm text-gray-500">Terjual 35 porsi</p>
+                        <h3 class="text-sm font-semibold">Boketto Bliss Sushi</h3>
+                        <p class="text-sm text-gray-500">Sold 38 items</p>
                     </div>
 
                     <div class="flex flex-col items-center justify-center bg-blue-50 p-4 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">Katsu Curry</h3>
-                        <p class="text-sm text-gray-500">Terjual 33 porsi</p>
+                        <h3 class="text-sm font-semibold">Takoyaki Temptation</h3>
+                        <p class="text-sm text-gray-500">Sold 35 items</p>
                     </div>
 
                     <div class="flex flex-col items-center justify-center bg-blue-50 p-4 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">Sashimi Mix</h3>
-                        <p class="text-sm text-gray-500">Terjual 30 porsi</p>
+                        <h3 class="text-sm font-semibold">Ebi Katsu Don</h3>
+                        <p class="text-sm text-gray-500">Sold 33 items</p>
                     </div>
 
                     <div class="flex flex-col items-center justify-center bg-blue-50 p-4 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">Yakisoba</h3>
-                        <p class="text-sm text-gray-500">Terjual 28 porsi</p>
+                        <h3 class="text-sm font-semibold">Summer Hokkaido Ramen</h3>
+                        <p class="text-sm text-gray-500">Sold 30 items</p>
                     </div>
 
                     <div class="flex flex-col items-center justify-center bg-blue-50 p-4 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">Mochi Ice Cream</h3>
-                        <p class="text-sm text-gray-500">Terjual 26 porsi</p>
+                        <h3 class="text-sm font-semibold">Salmon Delight Sushi Roll</h3>
+                        <p class="text-sm text-gray-500">Sold 28 items</p>
                     </div>
 
                     <div class="flex flex-col items-center justify-center bg-blue-50 p-4 rounded-lg shadow-md">
-                            <h3 class="text-lg font-semibold">Chirashi Don</h3>
-                        <p class="text-sm text-gray-500">Terjual 24 porsi</p>
+                        <h3 class="text-sm font-semibold">Sushi Roll</h3>
+                        <p class="text-sm text-gray-500">Sold 26 items</p>
                     </div>
 
                     <div class="flex flex-col items-center justify-center bg-blue-50 p-4 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">Okonomiyaki</h3>
-                        <p class="text-sm text-gray-500">Terjual 22 porsi</p>
+                        <h3 class="text-sm font-semibold">Dorayaki Delight</h3>
+                        <p class="text-sm text-gray-500">Sold 24 items</p>
                     </div>
 
                     <div class="flex flex-col items-center justify-center bg-blue-50 p-4 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">Udon</h3>
-                        <p class="text-sm text-gray-500">Terjual 20 porsi</p>
+                        <h3 class="text-sm font-semibold">Tempura Crunch Sushi</h3>
+                        <p class="text-sm text-gray-500">Sold 22 items</p>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center bg-blue-50 p-4 rounded-lg shadow-md">
+                        <h3 class="text-sm font-semibold">Salmon Sushi</h3>
+                        <p class="text-sm text-gray-500">Sold 20 items</p>
                     </div>
                 </div>
             </div>
