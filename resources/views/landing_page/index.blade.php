@@ -51,64 +51,64 @@
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
                 <img src="{{ asset('assets/makanan (1).jpg') }}" alt="Dish 1" class="w-full h-36 object-cover">
                 <div class="p-4">
-                    <h3 class="text-lg font-bold">Delicious Dish 1</h3>
-                    <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3 class="text-lg font-bold">Maguro Sashimi</h3>
+                    <p class="mt-2 text-gray-600">Enjoy our delicious Maguro Sashimi, fresh tuna chunks served perfectly. This high-quality Tuna has a creamy texture and rich flavor, making it a favorite choice for sashimi fans.</p>
                 </div>
             </div>
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
                 <img src="{{ asset('assets/makanan (2).jpg') }}" alt="Dish 2" class="w-full h-36 object-cover">
                 <div class="p-4">
-                    <h3 class="text-lg font-bold">Delicious Dish 2</h3>
-                    <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3 class="text-lg font-bold">Hamachi Sashimi</h3>
+                    <p class="mt-2 text-gray-600">Hamachi Sashimi, or saury, offers a rich flavor and chewy texture. These thick cuts of fish meat provide a satisfying dining experience with authentic Marine flavors.</p>
                 </div>
             </div>
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
                 <img src="{{ asset('assets/makanan (3).jpg') }}" alt="Dish 2" class="w-full h-36 object-cover">
                 <div class="p-4">
-                    <h3 class="text-lg font-bold">Delicious Dish 2</h3>
-                    <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3 class="text-lg font-bold">Kimchi Ramen</h3>
+                    <p class="mt-2 text-gray-600">Our Kimchi Ramen brings an interesting fusion flavor with spicy and sour broth from kimchi. Served with chewy noodles, chashu, soft-boiled soft-boiled eggs, and the addition of fresh kimchi, this ramen offers a dynamic and refreshing taste sensation.</p>
                 </div>
             </div>
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
                 <img src="{{ asset('assets/makanan (4).jpg') }}" alt="Dish 2" class="w-full h-36 object-cover">
                 <div class="p-4">
-                    <h3 class="text-lg font-bold">Delicious Dish 2</h3>
-                    <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3 class="text-lg font-bold">Spicy Ramen With Sashimi</h3>
+                    <p class="mt-2 text-gray-600">For lovers of spicy flavors, our Spicy Ramen is the right choice. The rich broth is topped with Hot Chili Peppers, served with chewy noodles, chashu, soft-boiled eggs, and fresh vegetables. Enjoy the perfect combination of spicy and savory.</p>
                 </div>
             </div>
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
                 <img src="{{ asset('assets/makanan (5).jpg') }}" alt="Dish 2" class="w-full h-36 object-cover">
                 <div class="p-4">
-                    <h3 class="text-lg font-bold">Delicious Dish 2</h3>
-                    <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3 class="text-lg font-bold">Beef Dumplings</h3>
+                    <p class="mt-2 text-gray-600">Our Beef Dumplings are made with high quality beef seasoned with selected spices. With a juicy texture and rich flavor, this dumpling is a satisfying option for beef lovers.</p>
                 </div>
             </div>
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
                 <img src="{{ asset('assets/makanan (6).jpg') }}" alt="Dish 1" class="w-full h-36 object-cover">
                 <div class="p-4">
-                    <h3 class="text-lg font-bold">Delicious Dish 1</h3>
-                    <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3 class="text-lg font-bold">Classic Sake Sashimi</h3>
+                    <p class="mt-2 text-gray-600">Classic Sake Sashimi features pieces of fresh salmon with a delicate and slightly sweet taste. Perfect for sashimi lovers, this dish delivers freshness and an unforgettable authentic taste.</p>
                 </div>
             </div>
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
                 <img src="{{ asset('assets/makanan (7).jpg') }}" alt="Dish 2" class="w-full h-36 object-cover">
                 <div class="p-4">
-                    <h3 class="text-lg font-bold">Delicious Dish 2</h3>
-                    <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3 class="text-lg font-bold">Ginger Chicken Stir-Fry</h3>
+                    <p class="mt-2 text-gray-600">Cooked chicken cutlets with fresh ginger and fragrant soya sauce. The warm ginger flavor and savory soya sauce create a delicious and refreshing dish, perfect for lunch or dinner.</p>
                 </div>
             </div>
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
                 <img src="{{ asset('assets/makanan (8).jpg') }}" alt="Dish 2" class="w-full h-36 object-cover">
                 <div class="p-4">
-                    <h3 class="text-lg font-bold">Delicious Dish 2</h3>
-                    <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3 class="text-lg font-bold">Tokyo Roll</h3>
+                    <p class="mt-2 text-gray-600">Perfect blend of fresh salmon, avocado and cucumber dressed with soft sushi rice and nori. Topped with toasted sesame seeds and teriyaki sauce, this roll delivers an authentic and satisfying taste of classic Japan.</p>
                 </div>
             </div>
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
                 <img src="{{ asset('assets/makanan (9).jpg') }}" alt="Dish 2" class="w-full h-36 object-cover">
                 <div class="p-4">
-                    <h3 class="text-lg font-bold">Delicious Dish 2</h3>
-                    <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3 class="text-lg font-bold">Unagi Kabayaki Sauce</h3>
+                    <p class="mt-2 text-gray-600">A classic Japanese sauce with a savory sweet taste that is perfect for grilled unagi. Ideal for adding an authentic touch to your favorite grilled unagi, sushi or rice bowl dish.</p>
                 </div>
             </div>
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
